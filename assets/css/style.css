@@ -1,0 +1,331 @@
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope-VariableFont_wght.ttf');
+  font-style: normal;
+}
+
+* {
+  font-family: 'Manrope', sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  position: relative;
+  transition: var(--transition-3);
+}
+
+:root {
+  --primary: #0d6efd;
+  --success: #20c997;
+  --middle: #6c757d;
+  --danger: #dc3545;
+  --alert: #ffc107;
+  --nocolor: transparent;
+  --bd-filter-5: blur(5px);
+  --bd-filter-10: blur(10px);
+  --bd-filter-20: blur(20px);
+  --transition-3: all .3s cubic-bezier(0, 0, 0.2, 1);
+  --transition-5: all .5s cubic-bezier(0, 0, 0.2, 1);
+  --transition-1s: all 1s cubic-bezier(0, 0, 0.2, 1);
+  --radius-5: 5px;
+  --radius-10: 10px;
+  --radius-20: 20px;
+}
+
+.dark {
+  --color: #FEFEFE;
+  --color-trans: #FEFEFE3E;
+  --cl-alt: #D3DDED;
+  --cl-alt-trans: #D3DDED3E;
+  --bg: #07070C;
+  --bg-trans: #07070C3E;
+  --bg-alt: #25293E;
+  --bg-alt-trans: #25293E3E;
+}
+
+
+.light {
+  --color: #07070C;
+  --color-trans: #07070C3E;
+  --cl-alt: #25293E;
+  --cl-alt-trans: #25293E3E;
+  --bg: #FEFEFE;
+  --bg-trans: #FEFEFE3E;
+  --bg-alt: #D3DDED;
+  --bg-alt-trans: #D3DDED3E;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  font-size: 13px;
+  background-image: url(../images/background-light.jpg);
+  color: var(--color);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 200%;
+  background-repeat: no-repeat;
+  transition: var(--transition-1s);
+}
+
+body img.imgIcon {
+  width: 32px;
+  position: absolute;
+}
+
+body main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: var(--bd-filter-5);
+}
+
+body main>* {
+  border-radius: var(--radius-20);
+  box-shadow: inset 0 0 calc(var(--radius-20) * 2) var(--cl-alt-trans), 0 0 calc(var(--radius-20) * 2) var(--cl-alt-trans);
+}
+
+body main .intro {
+  min-height: 400px;
+  padding-bottom: calc(var(--radius-10) * 3);
+  width: 750px;
+  background-color: var(--bg-trans);
+  backdrop-filter: var(--bd-filter-20);
+}
+
+body main .intro .infos {
+  /* background-color: var(--primary); */
+  height: 80px;
+  padding: 0 calc(var(--radius-20) * 2 + var(--radius-10));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: inset 0 -20px var(--radius-10) var(--bg-alt-trans), 0 var(--radius-10) var(--radius-10) var(--bg-alt-trans);
+  border-radius: var(--radius-20);
+}
+
+body main .intro .infos div {
+  height: 24px;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-alt-trans);
+  border-radius: var(--radius-5);
+}
+
+body main .intro .infos div.userBox {
+  padding-right: calc(var(--radius-20) * 3/2);
+  padding-left: var(--radius-5);
+}
+
+body main .intro .infos div.userBox img{
+  right: -5px;
+}
+
+body main .intro .infos div.lives {
+  padding-left: calc(var(--radius-20) * 3/2.5);
+  padding-right: var(--radius-5);
+}
+
+body main .intro .infos div.lives img{
+  left: -10px;
+}
+
+body main .intro .container {
+  max-height: calc(100% - 80px);
+  width: 750px;
+  overflow: visible;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+body main .intro .container .content {
+  height: 100%;
+  width: 750px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--radius-10) + var(--radius-5));
+}
+
+body main .intro .container .content h1 {
+  transform: scale(1.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+body main .intro .hero .starter {
+  height: calc(var(--radius-20) * 2);
+  width: calc(var(--radius-20) * 6);
+  background-color: var(--primary);
+  border: none;
+  border-radius: var(--radius-10);
+  color: var(--bg);
+  letter-spacing: calc(var(--radius-5) / 2);
+  margin-top: var(--radius-20);
+  transition: var(--transition-3);
+}
+
+body main .intro .hero .starter:hover {
+  opacity: .4;
+}
+
+
+
+
+
+
+
+body main .intro .userInfos form {
+  height: 140px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+body main .intro .userInfos form .usernameBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 300px;
+}
+
+body main .intro .userInfos form .usernameBox input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--color);  
+  background-color: transparent;
+  padding-top: var(--radius-20);
+  text-align: left;
+  text-indent: calc(var(--radius-10) + var(--radius-5)) !important;
+}
+
+body main .intro .userInfos form .usernameBox input~label {
+  position: absolute;
+  left: calc(var(--radius-10) + var(--radius-5)) !important;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: none;
+}
+
+body main .intro .userInfos form .usernameBox input:valid~label,
+body main .intro .userInfos form .usernameBox input:focus~label {
+  top: 0;
+  transform: scale(.7);
+}
+
+body main .intro .userInfos form button {
+  height: 40px;
+  width: 30%;
+  border: none;
+  background-color: var(--primary);
+  font-weight: bold;
+  border-radius: var(--radius-10);
+  color: var(--bg-alt );
+}
+
+
+
+
+
+
+
+body main .intro .setLevelBox {
+  height: 200px;
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--bg-trans);
+  backdrop-filter: var(--bd-filter-20);
+  border-radius: var(--radius-20);
+}
+
+body main .intro .setLevelBox>button {
+  height: 80%;
+  width: 27%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: var(--radius-20) 0;
+  gap: var(--radius-10);
+  text-align: center;
+  color: var(--color) !important;
+  background-color: var(--bg-trans);
+  box-shadow: inset 0 0 var(--radius-20) var(--cl-alt-trans), 0 0 var(--radius-20) var(--bg-alt);
+  border-radius: var(--radius-10);
+  cursor: pointer;
+  border: none;
+}
+
+body main .intro .setLevelBox>button:last-child {
+  background-color: var(--danger);
+}
+
+body main .intro .setLevelBox>button:hover {
+  box-shadow: inset 0 0 var(--radius-20) var(--cl-alt-trans), 0 0 calc(var(--radius-20) * 2) var(--color-trans);
+  opacity: .7;
+}
+
+body main .intro .setLevelBox>button span.active {
+  height: 22px;
+  width: 22px;
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-20);
+  position: absolute;
+  top: var(--radius-10);
+  right: var(--radius-10);
+}
+
+body main .intro .setLevelBox>button span.selected {
+  height: 35px;
+  width: 80%;
+  background-color: var(--nocolor);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-10);
+}
+
+body main .intro .setLevelBox>button#isActive span {
+  background-color: var(--primary);
+  color: var(--color);
+}
+
+body main .intro .validLevel {
+  height: 40px;
+  width: 240px;
+  font-weight: bold;
+  background-color: var(--primary);
+  color: var(--bg);
+  border: none;
+  border-radius: var(--radius-10);
+}
+
+body main .intro .validLevel:hover {
+  opacity: .7;
+}
