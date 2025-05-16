@@ -3,51 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guess the Number</title>
   <link rel="stylesheet" href="./assets/css/style.css">
+  <title>NumberGuess</title>
 </head>
-<body class="light">
+<body>
   <main>
-    <div class="intro" id="intro">
-      <div class="infos" id="infos">
-        <div class="userBox" id="userBox">
-          <span class="playerName" id="playerName">Username</span>
-          <img src="./assets/images/usericon.jpg" alt="userIcon" class="imgIcon">
+    <div class="container" id="container">
+      <h1 class="int" id="int">Hi, welcome <span class="autoName" id="autoName"></span> !</h1>
+      <h2 class="ort" id="ort">Input your name and choose your level.</h2>
+      <form action="" class="nameForm" id="nameForm">
+        <div class="nameBox" id="nameBox">
+          <input type="text" name="username" id="username" value="player">
+          <label for="username">Input here your name</label>
         </div>
-        <span class="levelBox" id="levelBox">Level: Not set</span>
-        <div class="lives" id="lives">
-          <img src="./assets/images/heartlife.png" alt="Life" class="imgIcon">
-          <span class="gameLife" id="gameLife">?? Lives</span>
-        </div>
-      </div>
-      <div class="container" id="container">
-        <div class="content hero" id="hero">
-          <h1>Hello, Welcome !</h1>
-          <p>We are happy to see you here !</p>
-          <p>Let start a game party.</p>
-          <button type="button" class="starter" id="starter" onclick="starting()">Start</button>
-        </div>
-        <div class="content userInfos" id="userInfos">
-          <h1>About you . . .</h1>
-          <p>Know your name will help us to sympathize with you. <br> So how can we call you like ?</p>
-          <form action="" id="nameForm">
-            <div class="usernameBox">
-              <input type="text" name="username" id="username" required>
-              <label for="username">Enter your name here</label>
-            </div>
-            <button type="submit">Submit the name</button>
-          </form>
-        </div>
-        <div class="content level" id="level">
-          <h1>Great, <span id="userGreat"></span></h1>
-          <p>Now, choose your level.</p>
-          <div class="setLevelBox" id="setLevelBox">
+        <div class="levelOptions" id="levelOptions">
+          <h2>Please select a level before submition.</h2>
+          <div class="option begOpt" id="begOpt">
+            <label for="beg">Continue as Beginner</label>
+            <input type="radio" name="level" id="beg" value="./ingame/beginner/index.html" required>
           </div>
-          <button type="button" class="validLevel" id="validLevel">Continue</button>
+          <div class="option medOpt" id="medOpt">
+            <label for="med">Continue as Regular</label>
+            <input type="radio" name="level" id="med" value="./ingame/normal/index.html" required>
+          </div>
+          <div class="option proOpt" id="proOpt">
+            <label for="pro">Continue as Expert</label>
+            <input type="radio" name="level" id="pro" value="./ingame/pro/index.html" required>
+          </div>
         </div>
-      </div>
+        <button type="submit" class="nameFormSub" id="nameFormSub" onclick="setPlayer()">Aggree and Continue</button>
+      </form>
     </div>
   </main>
 </body>
 <script src="./assets/js/app.js"></script>
+<script src="./assets/js/app.game.js"></script>
 </html>
